@@ -84,9 +84,9 @@ python3 importer.py
 ```
 
 ```
-
 新建account_pwd.txt文件
 按照如下格式写入
+
 18459748505----astvar3647
 14760253606----gmidy8470
 14760253607----uoyuic8427
