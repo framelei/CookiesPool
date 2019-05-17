@@ -13,41 +13,54 @@ pip3 install -r requirements.txt
 
 ### 接口基本配置
 
-```python
-# Redis数据库地址
+```# Redis数据库地址
 REDIS_HOST = 'localhost'
 
 # Redis端口
 REDIS_PORT = 6379
 
-# Redis密码，如无填None
-REDIS_PASSWORD = 'foobared'
+# Redis密码，如无填Non
+# REDIS_PASSWORD = 'foobared'
+REDIS_PASSWORD = None
 
 # 产生器使用的浏览器
 BROWSER_TYPE = 'Chrome'
 
 # 产生器类，如扩展其他站点，请在此配置
+# Key  为Redis数据库的表名
+# Value为生成cookies的类名。用于调度器动态实例化对象
 GENERATOR_MAP = {
     'weibo': 'WeiboCookiesGenerator'
 }
 
 # 测试类，如扩展其他站点，请在此配置
+# Key  为Redis数据库的表名
+# Value为验证cookies的类名。用于调度器动态实例化对象
 TESTER_MAP = {
     'weibo': 'WeiboValidTester'
 }
 
 # 检测器检测接口
+# test_url = TEST_URL_MAP[self.website]
 TEST_URL_MAP = {
-    'weibo': 'https://m.weibo.cn/api/container/getIndex?uid=1804544030&type=uid&page=1&containerid=1076031804544030'
+    'weibo': 'https://m.weibo.cn/'
 }
 
 # 产生器和验证器循环周期
 CYCLE = 120
 
 # API地址和端口
-API_HOST = '0.0.0.0'
+# 分布式爬虫时使用可公网访问的服务器ip
+# API_HOST = '192.168.43.68'
+API_HOST = '127.0.0.1'
 API_PORT = 5000
 
+# 产生器开关，模拟登录添加Cookies
+GENERATOR_PROCESS = False
+# 验证器开关，循环检测数据库中Cookies是否可用，不可用删除
+VALID_PROCESS = True
+# API接口服务
+API_PROCESS = True
 ```
 
 ### 进程开关
@@ -64,11 +77,6 @@ API_PROCESS = True
 ```
 
 
-## 账号购买
-
-账号可在淘宝购买
-
-
 ## 导入账号
 
 ```
@@ -76,20 +84,14 @@ python3 importer.py
 ```
 
 ```
-请输入账号密码组, 输入exit退出读入
+
+新建account_pwd.txt文件
+按照如下格式写入
 18459748505----astvar3647
 14760253606----gmidy8470
 14760253607----uoyuic8427
 18459749258----rktfye8937
-账号 18459748505 密码 astvar3647
-录入成功
-账号 14760253606 密码 gmidy8470
-录入成功
-账号 14760253607 密码 uoyuic8427
-录入成功
-账号 18459749258 密码 rktfye8937
-录入成功
-exit
+
 ```
 
 
