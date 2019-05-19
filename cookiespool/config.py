@@ -1,10 +1,13 @@
 # Redis数据库地址
+# REDIS_HOST = '127.0.0.1'
 REDIS_HOST = '192.168.43.68'
+
 
 # Redis端口
 REDIS_PORT = 6379
 
 # Redis密码，如无填None
+# REDIS_PASSWORD = None
 REDIS_PASSWORD = 're123456'
 
 # 产生器使用的浏览器
@@ -37,7 +40,9 @@ CYCLE = 120
 # 分布式爬虫时使用可公网访问的服务器ip
 API_HOST = '192.168.43.212'
 # API_HOST = '127.0.0.1'
-API_PORT = 5000
+API_PORT = 5555
+# http://192.168.43.212:5555/weibo/random
+
 
 # 产生器开关，模拟登录添加Cookies
 GENERATOR_PROCESS = False
