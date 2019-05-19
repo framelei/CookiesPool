@@ -5,7 +5,7 @@ REDIS_HOST = '192.168.43.68'
 REDIS_PORT = 6379
 
 # Redis密码，如无填None
-REDIS_PASSWORD = None
+REDIS_PASSWORD = 're123456'
 
 # 产生器使用的浏览器
 BROWSER_TYPE = 'Chrome'
