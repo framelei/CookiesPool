@@ -1,6 +1,6 @@
 # Redis数据库地址
-# REDIS_HOST = '127.0.0.1'
-REDIS_HOST = '192.168.43.68'
+REDIS_HOST = '127.0.0.1'
+# REDIS_HOST = '192.168.43.68'
 
 
 # Redis端口
@@ -17,7 +17,7 @@ BROWSER_TYPE = 'Chrome'
 # Key  为Redis数据库的表名
 # Value为生成cookies的类名。用于调度器动态实例化对象
 GENERATOR_MAP = {
-    'weibo': 'WeiboCookiesGenerator'
+     'weibo': 'WeiboCookiesGenerator',
 }
 
 # 测试类，如扩展其他站点，请在此配置
@@ -38,15 +38,15 @@ CYCLE = 120
 
 # API地址和端口
 # 分布式爬虫时使用可公网访问的服务器ip
-API_HOST = '192.168.43.212'
-# API_HOST = '127.0.0.1'
+# API_HOST = '192.168.43.212'
+API_HOST = '127.0.0.1'
 API_PORT = 5555
 # http://192.168.43.212:5555/weibo/random
 
 
 # 产生器开关，模拟登录添加Cookies
-GENERATOR_PROCESS = False
+GENERATOR_PROCESS = True
 # 验证器开关，循环检测数据库中Cookies是否可用，不可用删除
-VALID_PROCESS = True
+VALID_PROCESS = False
 # API接口服务
-API_PROCESS = True
+API_PROCESS = False

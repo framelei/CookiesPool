@@ -104,7 +104,8 @@ class WeiboCookiesGenerator(CookiesGenerator):
         :param website: 站点名称
         :param browser: 使用的浏览器
         """
-        CookiesGenerator.__init__(self, website)
+        # CookiesGenerator.__init__(self, website)
+        super(WeiboCookiesGenerator,self).__init__(website)
         self.website = website
     
     def new_cookies(self, username, password):
@@ -115,8 +116,6 @@ class WeiboCookiesGenerator(CookiesGenerator):
         :return: 用户名和Cookies
         """
         return WeiboCookies(username, password, self.browser).main()
-
-
 
 
 if __name__ == '__main__':

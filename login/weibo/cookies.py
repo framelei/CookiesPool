@@ -228,5 +228,5 @@ class WeiboCookies():
 
 
 if __name__ == '__main__':
-    result = WeiboCookies('14773427930', 'x6pybpakq1').main()
+    result = WeiboCookies('18866478849', 'h602009').main()
     print(result)

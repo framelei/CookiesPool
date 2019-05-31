@@ -2,6 +2,7 @@ import time
 from multiprocessing import Process
 from cookiespool.api import app
 from cookiespool.tester import *
+from cookiespool.generator import WeiboCookiesGenerator
 
 
 class Scheduler(object):
@@ -25,7 +26,7 @@ class Scheduler(object):
             print('Cookies生成进程开始运行')
             try:
                 for website, cls in GENERATOR_MAP.items():
-                    generator = eval(cls + '(website="' + website + '")')
+                    generator = eval(cls + '(website="' + website + '")')   #eval(WeiboCookiesGenerator(website="weibo"))
                     print(generator,'*'*30)
                     generator.run()
                     print('Cookies生成完成')
@@ -33,6 +34,7 @@ class Scheduler(object):
                     time.sleep(cycle)
             except Exception as e:
                 print(e.args)
+
     
     @staticmethod
     def api():
