@@ -1,5 +1,5 @@
 # Redis数据库地址
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '129.28.200.147'
 # REDIS_HOST = '192.168.43.68'
 
 
@@ -8,7 +8,7 @@ REDIS_PORT = 6379
 
 # Redis密码，如无填None
 # REDIS_PASSWORD = None
-REDIS_PASSWORD = 're123456'
+REDIS_PASSWORD = 'Re_Lei'
 
 # 产生器使用的浏览器
 BROWSER_TYPE = 'Chrome'
@@ -39,7 +39,7 @@ CYCLE = 120
 # API地址和端口
 # 分布式爬虫时使用可公网访问的服务器ip
 # API_HOST = '192.168.43.212'
-API_HOST = '127.0.0.1'
+API_HOST = '0.0.0.0'
 API_PORT = 5555
 # http://192.168.43.212:5555/weibo/random
 
