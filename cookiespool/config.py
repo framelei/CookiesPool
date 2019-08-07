@@ -1,6 +1,5 @@
 # Redis数据库地址
 REDIS_HOST = '129.28.200.147'
-# REDIS_HOST = '192.168.43.68'
 
 
 # Redis端口
@@ -38,15 +37,14 @@ CYCLE = 120
 
 # API地址和端口
 # 分布式爬虫时使用可公网访问的服务器ip
-# API_HOST = '192.168.43.212'
 API_HOST = '0.0.0.0'
 API_PORT = 5555
-# http://192.168.43.212:5555/weibo/random
+# http://129.28.200.147:5555/weibo/random
 
 
 # 产生器开关，模拟登录添加Cookies
-GENERATOR_PROCESS = True
+GENERATOR_PROCESS = False
 # 验证器开关，循环检测数据库中Cookies是否可用，不可用删除
-VALID_PROCESS = False
+VALID_PROCESS = True
 # API接口服务
-API_PROCESS = False
+API_PROCESS = True
